@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Tipologías de Redes</title>
+</head>
+<body bgcolor=lightblue ></body>
+<body>
+    <h1>Tipologías de Redes</h1>
+    <form action="#" method="post">
+
+        <h2>Datos Principales</h2>
+        <fieldset form="formulario_datos" name="grupo_datos_personales">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br>
+        </fieldset>        
+        <h2>Tipología de Red</h2>
+        <fieldset form="formulario_datos" name="grupo_datos_personales">
+        <label for="tipologia">Tipología de Red:</label>
+        <select id="tipologia" name="tipologia" required>
+            <option value="">Seleccione una opción</option>
+            <option value="lan">LAN (Red de área local)</option>
+            <option value="wan">WAN (Red de área amplia)</option>
+            <option value="man">MAN (Red de área metropolitana)</option>
+            <option value="pan">PAN (Red de área personal)</option>
+            <option value="san">SAN (Red de área de almacenamiento)</option>
+        </select><br>
+        </fieldset>
+        
+        <h2>Detalles Adicionales</h2>
+        <fieldset form="formulario_datos" name="grupo_datos_personales">
+        <label for="uso">¿Para qué usas esta red?</label><br>
+        <textarea id="uso" name="uso"></textarea><br>
+
+        <label for="beneficios">¿Cuáles son los beneficios de esta red?</label><br>
+        <textarea id="beneficios" name="beneficios"></textarea><br>
+
+        <label for="desafios">¿Cuáles son los desafíos de esta red?</label><br>
+        <textarea id="desafios" name="desafios"></textarea><br>
+
+        <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+</body>
+
+</html>
