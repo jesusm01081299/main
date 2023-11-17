@@ -3,19 +3,19 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #7bff00;
-    box-shadow: 0px 8px 16px 0px rgb(255, 0, 0);
+    background-color: #6f00ff5e;
+    box-shadow: 0px 8px 16px 0px rgb(98, 0, 255);
     transition: all 0.3s ease;
 }
 
 .menu-container:hover {
-    box-sizing;: 0px 12px 20px 0px rgb(255, 0, 0)
+    box-shadow: 0px 12px 20px 0px rgb(162, 0, 255)
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #000000;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -34,7 +34,9 @@
 .menu-icono:hover {
     transform: scale(1.1);
 }
-
+/*
+cuerpo de la pagina  
+*/
 .nabar {
     display: none;
     transition: all 0.3s ease;
@@ -63,7 +65,7 @@
 }
 
 .nabar ul li a:hover {
-    color: #007BFF;
+    color: #ff0000;
 }
 
 
@@ -81,7 +83,7 @@ body {
 }
 
 h1, h3 {
-    color: #007BFF;
+    color: #000000;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
 }
@@ -106,12 +108,12 @@ ul {
 ul li {
     margin-bottom: 10px;
     padding-left: 20px;
-    border-left: 5px solid #007BFF;
+    border-left: 5px solid #8ea8fc;
     transition: all 0.3s ease;
 }
 
 ul li:hover {
-    border-left: 5px solid #0056b3;
+    border-left: 5px solid #8dbffc;
 }
 
 img {
@@ -122,4 +124,24 @@ img {
 
 center {
     text-align: center;
+}
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background: linear-gradient(45deg, #ffffff, rgb(189, 189, 189));
+    transition: all 0.3s ease;
+}
+
+/* Estilo para el título */
+h1 {
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+h1:hover {
+    color: #7aacf8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
