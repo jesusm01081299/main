@@ -1,31 +1,28 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0; /* Gris claro */
+    background-color: #c7c8ca; /* Gris claro */
     color: #333; /* Color de texto principal */
     margin: 0;
     padding: 20px;
+    transition: background-color 0.3s ease;
 }
 
-h2 {
+h2, h3 {
     color: #0066cc; /* Azul para los encabezados */
+    transition: color 0.3s ease;
 }
 
 p {
     line-height: 1.6;
 }
 
-h3 {
-    color: #0066cc; /* Azul para los encabezados secundarios */
-    margin-top: 20px;
-}
-
 a {
     color: #009933; /* Verde para los enlaces */
     text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
+    color: #007722; /* Cambia a un tono más oscuro de verde */
     text-decoration: underline;
 }
-
-/* Agrega más estilos según sea necesario */
