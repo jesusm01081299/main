@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #ffffff; /* Fondo gris claro */
+    color: #000000;
     margin: 0;
     padding: 0;
 }
@@ -12,17 +12,13 @@ body {
 }
 
 header {
-    background-color: #fff;
+    background-color: #c7c8ca;
     padding: 20px 0;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2, h3, h4 {
     color: #0066cc;
-}
-
-p {
-    line-height: 1.5;
 }
 
 .menu {
@@ -51,12 +47,11 @@ p {
 .navbar {
     display: none;
     width: 100%;
+    text-align: center;
 }
 
-.menu input:checked + .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.menu input:checked + .menu-icon + .navbar {
+    display: block;
     animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -68,6 +63,14 @@ p {
 
 .navbar li {
     margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.menu input:checked + .menu-icon + .navbar li {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .navbar a {
@@ -81,34 +84,34 @@ p {
     color: #004080;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.paragraph-container {
+    padding: 20px;
+}
+
+.separator {
+    height: 10px;
+}
+
+.separator1 { background-color: #7FB3D5; }
+.separator2 { background-color: #7FB3D5; }
+.separator3 { background-color: #7FB3D5; }
+.separator4 { background-color: #7FB3D5; }
+.separator5 { background-color: #7FB3D5; }
+
+/* Estilos 3D para los párrafos */
+.paragraph-container p,
+.paragraph-container img,
+.paragraph-container video,
+.paragraph-container audio {
+    margin: 10px 0;
+    transform: perspective(1px) scale(0.99);
+    transform-style: preserve-3d;
     transition: transform 0.3s ease-in-out;
 }
 
-img:hover {
-    transform: scale(1.1);
-}
-
-video, audio {
-    width: 100%;
-    max-height: 300px;
-    border-radius: 8px;
-}
-
-h4 {
-    color: #555;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.paragraph-container p:hover,
+.paragraph-container img:hover,
+.paragraph-container video:hover,
+.paragraph-container audio:hover {
+    transform: none;
 }
