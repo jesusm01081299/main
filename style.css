@@ -1,147 +1,111 @@
-.menu-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #6f00ff5e;
-    box-shadow: 0px 8px 16px 0px rgb(98, 0, 255);
-    transition: all 0.3s ease;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      padding: 20px;
+      background: linear-gradient(45deg, #ffffff, rgb(189, 189, 189));
+      transition: all 0.3s ease;
+      margin: 0;
+    }
 
-.menu-container:hover {
-    box-shadow: 0px 12px 20px 0px rgb(162, 0, 255)
-}
+    .header {
+      background-color: #6f00ff;
+      padding: 20px;
+      box-shadow: 0px 8px 16px rgba(98, 0, 255, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000000;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+    .header:hover {
+      box-shadow: 0px 12px 20px rgba(162, 0, 255, 0.3);
+    }
 
-.logo:hover {
-    color: #007BFF;
-}
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-.menu-icono {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+    .logo:hover {
+      color: #007BFF;
+    }
 
-.menu-icono:hover {
-    transform: scale(1.1);
-}
-/*
-cuerpo de la pagina  
-*/
-.nabar {
-    display: none;
-    transition: all 0.3s ease;
-}
+    .menu-icon {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 3;
+    }
 
-.nabar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    .menu-icon:hover {
+      transform: scale(1.1);
+    }
 
-.nabar ul li {
-    margin: 10px 0;
-    transition: all 0.3s ease;
-}
+    .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px rgba(98, 0, 255, 0.1);
+      transition: all 0.3s ease;
+      transform-origin: top;
+      transform: scaleY(0);
+      opacity: 0;
+      pointer-events: none;
+    }
 
-.nabar ul li:hover {
-    padding-left: 10px;
-}
+    .navbar.show {
+      transform: scaleY(1);
+      opacity: 1;
+      pointer-events: auto;
+    }
 
+    .navbar a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: block;
+      padding: 10px 20px;
+    }
 
-.nabar ul li a {
-    color: #333;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+    .navbar a:hover {
+      color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="#" class="logo">Logo</a>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="navbar" id="navbar">
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Acerca de</a>
+      <a href="#">Contacto</a>
+    </div>
+  </div>
 
-.nabar ul li a:hover {
-    color: #ff0000;
-}
+  <h1>Título Principal</h1>
+  <p>Contenido de la página.</p>
 
-
-#menu:checked ~ .nabar {
-    display: block;
-}
-
-body {
-    font-family: 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    padding: 20px;
-    background-color: #f8f9fa;
-    transition: all 0.3s ease;
-}
-
-h1, h3 {
-    color: #000000;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
-}
-
-h1:hover, h3:hover {
-    color: #0056b3;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-p {
-    margin-bottom: 20px;
-    text-indent: 50px;
-    text-align: justify;
-    letter-spacing: 1px;
-}
-
-ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-ul li {
-    margin-bottom: 10px;
-    padding-left: 20px;
-    border-left: 5px solid #8ea8fc;
-    transition: all 0.3s ease;
-}
-
-ul li:hover {
-    border-left: 5px solid #8dbffc;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 10px 10px 5px grey;
-}
-
-center {
-    text-align: center;
-}
-body {
-    font-family: 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    padding: 20px;
-    background: linear-gradient(45deg, #ffffff, rgb(189, 189, 189));
-    transition: all 0.3s ease;
-}
-
-/* Estilo para el título */
-h1 {
-    color: #000000;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
-}
-
-h1:hover {
-    color: #7aacf8;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
