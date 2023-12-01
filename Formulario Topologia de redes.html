@@ -3,51 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Tipologías de Redes</title>
+    <title>Prueba Formativa - Tipos de Redes de Computadoras</title>
+    <link rel="stylesheet" a href="style1.css">
 </head>
-<body bgcolor=lightblue ></body>
 <body>
-    <h1>Tipologías de Redes</h1>
+
+    <h1>Prueba Formativa - Tipos de Redes de Computadoras</h1>
+
     <form action="#" method="post">
 
-        <h2>Datos Principales</h2>
-        <fieldset form="formulario_datos" name="grupo_datos_personales">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br>
+        <h3>Pregunta 1: ¿Qué tipo de red se utiliza típicamente en un solo edificio o campus?</h3>
+        <input type="radio" name="pregunta1" value="a"> LAN (Local Area Network)<br>
+        <input type="radio" name="pregunta1" value="b"> WAN (Wide Area Network)<br>
+        <input type="radio" name="pregunta1" value="c"> MAN (Metropolitan Area Network)<br>
 
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required><br>
+        <h3>Pregunta 2: ¿Cuál de las siguientes opciones describe mejor una red privada utilizada por una organización?</h3>
+        <input type="radio" name="pregunta2" value="a"> Internet<br>
+        <input type="radio" name="pregunta2" value="b"> Intranet<br>
+        <input type="radio" name="pregunta2" value="c"> Extranet<br>
 
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required><br>
-        </fieldset>        
-        <h2>Tipología de Red</h2>
-        <fieldset form="formulario_datos" name="grupo_datos_personales">
-        <label for="tipologia">Tipología de Red:</label>
-        <select id="tipologia" name="tipologia" required>
-            <option value="">Seleccione una opción</option>
-            <option value="lan">LAN (Red de área local)</option>
-            <option value="wan">WAN (Red de área amplia)</option>
-            <option value="man">MAN (Red de área metropolitana)</option>
-            <option value="pan">PAN (Red de área personal)</option>
-            <option value="san">SAN (Red de área de almacenamiento)</option>
-        </select><br>
-        </fieldset>
-        
-        <h2>Detalles Adicionales</h2>
-        <fieldset form="formulario_datos" name="grupo_datos_personales">
-        <label for="uso">¿Para qué usas esta red?</label><br>
-        <textarea id="uso" name="uso"></textarea><br>
+        <h3>Pregunta 3: ¿Qué tipo de red se extiende sobre una amplia área geográfica, como un país o continente?</h3>
+        <input type="radio" name="pregunta3" value="a"> PAN (Personal Area Network)<br>
+        <input type="radio" name="pregunta3" value="b"> CAN (Campus Area Network)<br>
+        <input type="radio" name="pregunta3" value="c"> WAN (Wide Area Network)<br>
 
-        <label for="beneficios">¿Cuáles son los beneficios de esta red?</label><br>
-        <textarea id="beneficios" name="beneficios"></textarea><br>
+        <h3>Pregunta 4: ¿Qué protocolo se utiliza comúnmente para la transferencia de archivos en una red?</h3>
+        <input type="radio" name="pregunta4" value="a"> HTTP (Hypertext Transfer Protocol)<br>
+        <input type="radio" name="pregunta4" value="b"> FTP (File Transfer Protocol)<br>
+        <input type="radio" name="pregunta4" value="c"> SMTP (Simple Mail Transfer Protocol)<br>
 
-        <label for="desafios">¿Cuáles son los desafíos de esta red?</label><br>
-        <textarea id="desafios" name="desafios"></textarea><br>
+        <h3>Pregunta 5: ¿Qué dispositivo se utiliza para interconectar redes y filtrar el tráfico basado en direcciones MAC?</h3>
+        <input type="radio" name="pregunta5" value="a"> Hub<br>
+        <input type="radio" name="pregunta5" value="b"> Switch<br>
+        <input type="radio" name="pregunta5" value="c"> Router<br>
 
-        <input type="submit" value="Enviar">
-        </fieldset>
+        <br>
+        <input type="submit" value="Enviar respuestas">
+
     </form>
-</body>
 
+    <div id="respuestas">
+        <!-- Aquí se mostrarán las respuestas correctas después de enviar el formulario -->
+    </div>
+
+</body>
 </html>
